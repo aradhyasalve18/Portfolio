@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Aradhya's Portfolio - Web Developer and Designer">
+  <title>Aradhya - Portfolio</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"/>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Header with Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- Logo/Name -->
+        <div class="logo">
+          <span>Aradhya</span>
+        </div>
+        
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        
+        <!-- Hamburger Menu Toggle (Checkbox Hack) -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        
+        <!-- Mobile Navigation Menu -->
+        <ul class="mobile-nav">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero/Intro Section -->
+    <section id="home" class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1>Hey, I'm <span>Aradhya</span></h1>
+          <p class="hero-subtitle">I'm a <span>Web Developer</span></p>
+          <p class="hero-description">
+            Currently pursuing Computer Engineering from Fr. Conceicao Rodrigues College of Engineering. 
+            Aspiring to be a Developer.
+          </p>
+        </div>
+        <div class="hero-image">
+          <img src="main.jpg" alt="Aradhya - Web Developer" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <!-- <div class="about-image">
+            <img src="main.jpg" alt="Aradhya Profile Picture" />
+          </div> -->
+          <div class="about-text">
+            <p>
+              Hey, I'm Aradhya Salve. I'm passionate about solving real-world problems through code 
+              and building intuitive digital experiences. Currently pursuing Computer Engineering at 
+              Fr. Conceicao Rodrigues College of Engineering.
+            </p>
+            <p>
+              I enjoy working on web development, especially frontend and UI/UX design. Curious by 
+              nature, I'm always exploring new technologies and tools. Eager to contribute to meaningful 
+              projects and grow as a developer.
+            </p>
+            
+            <!-- Skills Display with Icons -->
+            <div class="skills-section">
+              <h3>Skills</h3>
+              <div class="skills-grid">
+                <div class="skill-item">
+                  <i class="fab fa-html5" aria-hidden="true"></i>
+                  <span>HTML</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fab fa-css3-alt" aria-hidden="true"></i>
+                  <span>CSS</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fab fa-js" aria-hidden="true"></i>
+                  <span>JavaScript</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fab fa-react" aria-hidden="true"></i>
+                  <span>React.js</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fab fa-python" aria-hidden="true"></i>
+                  <span>Python</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fab fa-git-alt" aria-hidden="true"></i>
+                  <span>Git & GitHub</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fas fa-database" aria-hidden="true"></i>
+                  <span>MySQL</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fas fa-code" aria-hidden="true"></i>
+                  <span>C/C++</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+          <!-- Project Card 1 -->
+          <article class="project-card">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-laptop-code" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3><a href="#" class="project-link">Portfolio Website</a></h3>
+              <p>
+                A responsive personal portfolio website showcasing my skills, projects, and contact information. 
+                Built with HTML, CSS, and modern web design principles.
+              </p>
+            </div>
+          </article>
+
+          <!-- Project Card 2 -->
+          <article class="project-card">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-gamepad" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3><a href="#" class="project-link">Quiz Game</a></h3>
+              <p>
+                An interactive quiz game application with multiple choice questions and score tracking. 
+                Features engaging UI and smooth user experience.
+              </p>
+            </div>
+          </article>
+
+          <!-- Project Card 3 -->
+          <article class="project-card">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-globe" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3><a href="#" class="project-link">Web Application</a></h3>
+              <p>
+                A modern web application built with React.js, featuring dynamic content, responsive design, 
+                and efficient state management.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-content">
+          <form class="contact-form" action="#" method="post">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                placeholder="Your Name" 
+                required 
+                aria-required="true"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="Your Email" 
+                required 
+                aria-required="true"
+              />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                rows="5" 
+                placeholder="Your Message" 
+                required 
+                aria-required="true"
+              ></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="social-links">
+        <a href="#" aria-label="GitHub Profile">
+          <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        <a href="#" aria-label="Instagram Profile">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="#" aria-label="LinkedIn Profile">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+        <a href="#" aria-label="WhatsApp Contact">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        </a>
+      </div>
+      <p class="copyright">&copy; 2025 Aradhya. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
