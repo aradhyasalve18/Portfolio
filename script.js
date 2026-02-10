@@ -1,70 +1,75 @@
-
 document.addEventListener("DOMContentLoaded", function () {
+  // Initialize EmailJS here
+  emailjs.init("hgLDAAZJQJbzfpEdJ");
 
   const nameInput = document.getElementById("name");
   const emailInput = document.getElementById("email");
   const phoneInput = document.getElementById("phone");
+  const messageInput = document.getElementById("message");
   const addBtn = document.getElementById("addContactBtn");
-  const contactList = document.getElementById("contactList");
 
   let contacts = JSON.parse(localStorage.getItem("contacts")) || [];
-  let editIndex = -1;
 
-  function renderContacts() {
-  console.clear();   // clears old output (optional)
-
-  console.log("==== Contact List ====");
-
-  contacts.forEach((c, index) => {
-    console.log(`Contact ${index + 1}`);
-    console.log("Name :", c.name);
-    console.log("Email:", c.email);
-    console.log("Phone:", c.phone);
-    console.log("---------------------");
-  });
-
-  localStorage.setItem("contacts", JSON.stringify(contacts));
-}
-
+  function logContacts() {
+    console.clear();
+    console.log("===== CONTACT MESSAGES =====");
+    contacts.forEach((c, index) => {
+      console.log(`Contact #${index + 1}`);
+      console.log("Name   :", c.name);
+      console.log("Email  :", c.email);
+      console.log("Phone  :", c.phone);
+      console.log("Message:", c.message || "(No message)");
+      console.log("----------------------------");
+    });
+    localStorage.setItem("contacts", JSON.stringify(contacts));
+  }
 
   addBtn.addEventListener("click", function () {
     const name = nameInput.value.trim();
     const email = emailInput.value.trim();
     const phone = phoneInput.value.trim();
+    const message = messageInput.value.trim();
 
-    if (!name || !email || !phone) {
-      alert("Fill all fields");
+    if (!name || !email || !phone || !message) {
+      alert("Please fill all fields!");
       return;
     }
 
-    if (editIndex === -1) {
-      contacts.push({ name, email, phone });
-    } else {
-      contacts[editIndex] = { name, email, phone };
-      editIndex = -1;
-      addBtn.textContent = "Add Contact";
-    }
+    const contact = { name, email, phone, message };
 
+    emailjs.send(
+      "service_0bn6ur8",
+      "template_z50virc",
+      { name, email, phone, message }
+    )
+    .then(function () {
+      alert("✅ Message sent successfully!");
+    })
+    .catch(function (error) {
+      console.error("EmailJS Error:", error);
+      alert("❌ Failed to send message");
+    });
+
+    contacts.push(contact);
+    logContacts();
+
+    // Clear form
     nameInput.value = "";
     emailInput.value = "";
     phoneInput.value = "";
-
-    renderContacts();
+    messageInput.value = "";
   });
 
-  window.editContact = function (index) {
-    const c = contacts[index];
-    nameInput.value = c.name;
-    emailInput.value = c.email;
-    phoneInput.value = c.phone;
-    editIndex = index;
-    addBtn.textContent = "Update Contact";
-  };
-
+  // Developer-only helpers
   window.deleteContact = function (index) {
     contacts.splice(index, 1);
-    renderContacts();
+    logContacts();
   };
 
-  renderContacts();
+  window.editContact = function (index, newData) {
+    contacts[index] = { ...contacts[index], ...newData };
+    logContacts();
+  };
+
+  logContacts();
 });
