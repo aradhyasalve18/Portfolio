@@ -114,8 +114,8 @@
                   <span>Python</span>
                 </div>
                 <div class="skill-item">
-                  <i class="fab fa-git-alt" aria-hidden="true"></i>
-                  <span>Git & GitHub</span>
+                  <i class="fab fa-java" aria-hidden="true"></i>
+                  <span>Java</span>
                 </div>
                 <div class="skill-item">
                   <i class="fas fa-database" aria-hidden="true"></i>
@@ -145,7 +145,7 @@
               </div>
             </div>
             <div class="project-content">
-              <h3><a href="#" class="project-link">Portfolio Website</a></h3>
+              <h3><a href="https://aradhyasalve18.github.io/Portfolio/" class="project-link">Portfolio Website</a></h3>
               <p>
                 A responsive personal portfolio website showcasing my skills, projects, and contact information. 
                 Built with HTML, CSS, and modern web design principles.
@@ -157,14 +157,13 @@
           <article class="project-card">
             <div class="project-image">
               <div class="project-placeholder">
-                <i class="fas fa-gamepad" aria-hidden="true"></i>
+                <i class="fas fa-user-graduate" aria-hidden="true"></i>
               </div>
             </div>
             <div class="project-content">
-              <h3><a href="#" class="project-link">Quiz Game</a></h3>
+              <h3><a href="https://github.com/aradhyasalve18/Student-Statistic-System" class="project-link">Student Statistic System</a></h3>
               <p>
-                An interactive quiz game application with multiple choice questions and score tracking. 
-                Features engaging UI and smooth user experience.
+                An System based on Student performance with database and crud operations and charts to analyse performance.
               </p>
             </div>
           </article>
@@ -173,15 +172,13 @@
           <article class="project-card">
             <div class="project-image">
               <div class="project-placeholder">
-                <i class="fas fa-globe" aria-hidden="true"></i>
+                <i class="fas fa-bank" aria-hidden="true"></i>
               </div>
             </div>
             <div class="project-content">
-              <h3><a href="#" class="project-link">Web Application</a></h3>
+              <h3><a href="https://github.com/aradhyasalve18/VBS" class="project-link">Virtual Banking System</a></h3>
               <p>
-                A modern web application built with React.js, featuring dynamic content, responsive design, 
-                and efficient state management.
-              </p>
+                A modern web application, having Virtual Banking System, with smooth UI and interactive dashboard.              </p>
             </div>
           </article>
         </div>
@@ -193,42 +190,28 @@
       <div class="container">
         <h2 class="section-title">Contact Me</h2>
         <div class="contact-content">
-          <form class="contact-form" action="#" method="post">
+          <form class="contact-form" onsubmit="return false;">
             <div class="form-group">
               <label for="name">Name</label>
-              <input 
-                type="text" 
-                id="name" 
-                name="name" 
-                placeholder="Your Name" 
-                required 
-                aria-required="true"
-              />
+              <input type="text" id="name" placeholder="Enter Name" required />
             </div>
+
             <div class="form-group">
               <label for="email">Email</label>
-              <input 
-                type="email" 
-                id="email" 
-                name="email" 
-                placeholder="Your Email" 
-                required 
-                aria-required="true"
-              />
+              <input type="email" id="email" placeholder="Enter Email" required />
             </div>
             <div class="form-group">
-              <label for="message">Message</label>
-              <textarea 
-                id="message" 
-                name="message" 
-                rows="5" 
-                placeholder="Your Message" 
-                required 
-                aria-required="true"
-              ></textarea>
+              <label for="phone">Phone Number</label>
+              <input type="number" id="phone" placeholder="Enter Phone Number" required />
             </div>
-            <button type="submit" class="submit-btn">Send Message</button>
+            <button type="button" id="addContactBtn" class="submit-btn">
+              Add Contact
+            </button>
           </form>
+
+<!-- Contact List Display -->
+<div id="contactList" style="margin-top:20px;"></div>
+
         </div>
       </div>
     </section>
@@ -238,7 +221,7 @@
   <footer>
     <div class="footer-container">
       <div class="social-links">
-        <a href="#" aria-label="GitHub Profile">
+        <a href="https://github.com/aradhyasalve18" aria-label="GitHub Profile">
           <i class="fab fa-github" aria-hidden="true"></i>
         </a>
         <a href="#" aria-label="Instagram Profile">
@@ -247,14 +230,14 @@
         <a href="#" aria-label="LinkedIn Profile">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
-        <a href="#" aria-label="WhatsApp Contact">
-          <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        <a href="mailto:attherate1807@gmail.com" aria-label="Email Contact">
+          <i class="fab fa-at" aria-hidden="true"></i>
         </a>
       </div>
       <p class="copyright">&copy; 2026 Aradhya. All rights reserved.</p>
     </div>
   </footer>
-
+<script src="./script.js"></script>
 </body>
 </html>
 
